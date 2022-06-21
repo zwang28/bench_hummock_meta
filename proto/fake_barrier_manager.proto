@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package fake_barrier_manager;
+
+option optimize_for = SPEED;

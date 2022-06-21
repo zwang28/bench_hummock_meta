@@ -618,9 +618,16 @@ checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
 name = "bench_hummock_meta"
 version = "0.1.0"
 dependencies = [
+ "async-trait",
  "clap",
+ "itertools",
  "madsim-tokio",
+ "madsim-tonic",
+ "madsim-tonic-build",
+ "prost",
+ "rand",
  "risingwave_common",
+ "risingwave_hummock_sdk",
  "risingwave_meta",
  "risingwave_pb",
  "risingwave_rpc_client",
@@ -3272,6 +3279,7 @@ dependencies = [
  "anyhow",
  "async-trait",
  "futures",
+ "itertools",
  "log",
  "madsim",
  "madsim-tokio",

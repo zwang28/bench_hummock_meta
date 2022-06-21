@@ -7,10 +7,11 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "3", features = ["derive"] }
-risingwave_common = {path = "../risingwave-dev/src/common"}
-risingwave_meta = {path = "../risingwave-dev/src/meta"}
-risingwave_rpc_client = {path = "../risingwave-dev/src/rpc_client"}
-risingwave_pb = {path = "../risingwave-dev/src/prost"}
+risingwave_common = {path = "./src/risingwave/src/common"}
+risingwave_meta = {path = "./src/risingwave/src/meta"}
+risingwave_rpc_client = {path = "./src/risingwave/src/rpc_client"}
+risingwave_pb = {path = "./src/risingwave/src/prost"}
+risingwave_hummock_sdk = {path = "./src/risingwave/src/storage/hummock_sdk"}
 tokio = { version = "=0.2.0-alpha.3", package = "madsim-tokio", features = [
     "fs",
     "rt",
@@ -22,3 +23,19 @@ tokio = { version = "=0.2.0-alpha.3", package = "madsim-tokio", features = [
 ] }
 tracing = "0.1"
 tracing-subscriber = "0.2"
+tonic = { version = "=0.2.0-alpha.3", package = "madsim-tonic" }
+prost = "0.10"
+async-trait = "0.1.56"
+itertools = "0.10.3"
+rand = "0.8.5"
+
+[build-dependencies]
+tonic-build = { version = "=0.2.0-alpha.1", package = "madsim-tonic-build" }
+
+[[bin]]
+name = "fake-compute-node"
+path = "src/bin/fake_compute_node.rs"
+
+[[bin]]
+name = "fake-barrier-manager"
+path = "src/bin/fake_barrier_manager.rs"

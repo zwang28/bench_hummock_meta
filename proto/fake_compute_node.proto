@@ -1,0 +1,5 @@
+syntax = "proto3";
+
+package fake_compute_node;
+
+option optimize_for = SPEED;

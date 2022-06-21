@@ -1,0 +1,4 @@
+[submodule "src/risingwave"]
+	path = src/risingwave
+	url = https://github.com/singularity-data/risingwave.git
+	branch = bench_hummock_meta

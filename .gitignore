@@ -1,0 +1,4 @@
+/target
+/src/prost/sim
+/src/prost
+!/src/prost/mod.rs
